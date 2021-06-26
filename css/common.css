@@ -6,6 +6,11 @@
 
   --color-winter-haze:          #d0bc7a;
 
+  --color-white-008:            rgba(255, 255, 255, 0.08);
+  --color-white-016:            rgba(255, 255, 255, 0.16);
+  --color-white-040:            rgba(255, 255, 255, 0.4);
+  --color-white-080:            rgba(255, 255, 255, 0.8);
+
 
   --font-primary: "TT Norms", "Arial", sans-serif;
   --font-secondary: "PF Regal Display", "Arial", sans-serif;
@@ -42,7 +47,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: var(--font-primary);
@@ -50,6 +58,10 @@ body {
   line-height: 1.5;
   color: var(--color-black-russian);
   background-color: var(--color-white);
+}
+
+main {
+  flex: 1 1 auto;
 }
 
 *,
@@ -102,6 +114,10 @@ img {
   color: var(--color-winter-haze);
 }
 
+.link--footer {
+  color: var(--color-white-080);
+}
+
 .link:hover,
 .link:focus {
   color: var(--color-winter-haze);
@@ -118,6 +134,11 @@ img {
   opacity: 0.72;
 }
 
+.link--footer:hover,
+.link--footer:focus {
+  color: var(--color-winter-haze);
+}
+
 .link:active {
   opacity: 0.72;
 }
@@ -127,6 +148,7 @@ img {
 }
 
 .header {
+  flex: 0 0 auto;
   padding: 20px 0;
 }
 
@@ -156,6 +178,7 @@ img {
 .main-nav__header-menu {
   flex: 1 1 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   margin-right: 32px;
@@ -265,4 +288,164 @@ img {
 .main-nav__toggle:focus::before,
 .main-nav__toggle:focus::after {
   background-color: var(--color-winter-haze);
+}
+
+.footer {
+  flex: 0 0 auto;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--color-white-040);
+  background-color: var(--color-black-russian);
+  background-image: url('../images/bg-footer.jpg');
+  background-size: 100% 100%;
+}
+
+.footer__menu {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--color-white-016);
+}
+
+.footer__menu-header-link {
+  color: var(--color-white);
+}
+
+.footer__menu-title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+}
+.footer__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__menu-item {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer__menu-item:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.footer__menu-link--contacts {
+  display: flex;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.footer__menu-link--contacts svg {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-top: 4px;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.footer__menu-link--contacts span {
+  display: inline-block;
+  flex: 0 1 auto;
+}
+
+.footer__contacts {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-white-016);
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-social__item:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.footer-social__link {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  color: var(--color-winter-haze);
+  background-color: var(--color-white-008);
+  border: 1px solid var(--color-white-016);
+  border-radius: 50%;
+  transition:
+    border-color var(--transition-400),
+    opacity var(--transition-400);
+}
+
+.footer-social__link:hover,
+.footer-social__link:focus {
+  border-color: var(--color-winter-haze);
+}
+
+.footer-social__link:active {
+  opacity: 0.72;
+}
+
+.footer-social__link svg {
+  display: block;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copyright-content {
+  margin: 0;
+}
+
+.footer__developer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__developer-link {
+  display: flex;
+  align-items: center;
+  color: var(--color-white-040);
+}
+
+.footer__developer-link:hover,
+.footer__developer-link:focus {
+  color: var(--color-white);
+  opacity: 0.72;
+}
+.footer__developer-link:active {
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--color-white);
+  opacity: 0.58;
+}
+
+.footer__developer-link span {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.footer__developer-link svg {
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+}
+
+.footer__disclaimer {
+  padding: 32px 0;
+}
+
+.footer__disclaimer-content {
+  margin: 0;
 }
