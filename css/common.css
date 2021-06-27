@@ -878,7 +878,7 @@ img {
   line-height: 1.29;
   color: var(--color-white-040);
   background-color: var(--color-black-russian);
-  background-image: url('../images/bg-footer.jpg');
+  background-image: url("../images/bg-footer.jpg");
   background-size: 100% 100%;
 }
 

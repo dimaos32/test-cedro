@@ -93,3 +93,25 @@
 
   form.addEventListener('click', onChangeViewBtnClick);
 })();
+
+(() => {
+  const cards = document.querySelector('.trends-slider__slides');
+
+  const onLikeClick = ((evt) => {
+    const btn = evt.target.closest('.product-card__like-btn');
+    const altText = btn.querySelector('span');
+
+    if (btn) {
+      evt.preventDefault();
+      if (btn.classList.contains('product-card__like-btn--liked')) {
+        btn.classList.remove('product-card__like-btn--liked');
+        altText.textContent = 'Добавить в избранное';
+      } else {
+        btn.classList.add('product-card__like-btn--liked');
+        altText.textContent = 'Удалить из избранного';
+      }
+    }
+  });
+
+  cards.addEventListener('click', onLikeClick);
+})();
