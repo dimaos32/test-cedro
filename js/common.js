@@ -73,45 +73,49 @@
 (() => {
   const form = document.querySelector('.profile-form form');
 
-  const onChangeViewBtnClick = (({target}) => {
-    const btn = target.closest('.profile-form__change-view-btn');
+  if (form) {
+    const onChangeViewBtnClick = (({target}) => {
+      const btn = target.closest('.profile-form__change-view-btn');
 
-    if (btn) {
-      const wrapper = btn.closest('.profile-form__input-wrapper');
-      const input = wrapper.querySelector('input');
-      const altText = wrapper.querySelector('span');
+      if (btn) {
+        const wrapper = btn.closest('.profile-form__input-wrapper');
+        const input = wrapper.querySelector('input');
+        const altText = wrapper.querySelector('span');
 
-      if (input.type === 'password') {
-        input.type = 'text';
-        altText.textContent = 'Скрыть пароль';
-      } else if (input.type === 'text') {
-        input.type = 'password';
-        altText.textContent = 'Показать пароль';
+        if (input.type === 'password') {
+          input.type = 'text';
+          altText.textContent = 'Скрыть пароль';
+        } else if (input.type === 'text') {
+          input.type = 'password';
+          altText.textContent = 'Показать пароль';
+        }
       }
-    }
-  });
+    });
 
-  form.addEventListener('click', onChangeViewBtnClick);
+      form.addEventListener('click', onChangeViewBtnClick);
+  }
 })();
 
 (() => {
   const cards = document.querySelector('.trends-slider__slides');
 
-  const onLikeClick = ((evt) => {
-    const btn = evt.target.closest('.product-card__like-btn');
-    const altText = btn.querySelector('span');
+  if (cards) {
+    const onLikeClick = ((evt) => {
+      const btn = evt.target.closest('.product-card__like-btn');
+      const altText = btn.querySelector('span');
 
-    if (btn) {
-      evt.preventDefault();
-      if (btn.classList.contains('product-card__like-btn--liked')) {
-        btn.classList.remove('product-card__like-btn--liked');
-        altText.textContent = 'Добавить в избранное';
-      } else {
-        btn.classList.add('product-card__like-btn--liked');
-        altText.textContent = 'Удалить из избранного';
+      if (btn) {
+        evt.preventDefault();
+        if (btn.classList.contains('product-card__like-btn--liked')) {
+          btn.classList.remove('product-card__like-btn--liked');
+          altText.textContent = 'Добавить в избранное';
+        } else {
+          btn.classList.add('product-card__like-btn--liked');
+          altText.textContent = 'Удалить из избранного';
+        }
       }
-    }
-  });
+    });
 
-  cards.addEventListener('click', onLikeClick);
+    cards.addEventListener('click', onLikeClick);
+  }
 })();
