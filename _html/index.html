@@ -261,6 +261,119 @@
   </header>
 
   <main>
+    <section class="profile">
+      <div class="profile__menu">
+        <div class="profile__menu-inner">
+          <ul class="profile__menu-list">
+            <li class="profile__menu-item">
+              <a class="link profile__menu-link profile__menu-link--current">Профиль</a>
+            </li>
+            <li class="profile__menu-item">
+              <a href="javascript:void(0);/#" class="link profile__menu-link">Мои заказы</a>
+            </li>
+            <li class="profile__menu-item">
+              <a href="javascript:void(0);/#" class="link profile__menu-link">Выход</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="profile__content">
+        <div class="profile__title">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6">
+                <h1 class="profile__title-content">
+                  Профиль
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-form">
+          <form action="#" method="POST">
+            <div class="profile-form__section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-6">
+                    <h2 class="profile-form__title">Данные профиля</h2>
+                    <label class="profile-form__label">
+                      <span>ФИО</span>
+                      <input type="text" name="user-name" required value="Алексеева Ульяна Евгеньевна" placeholder="Иванов Петр Сергеевич">
+                    </label>
+                    <label class="profile-form__label">
+                      <span>Почта</span>
+                      <input type="email" name="user-email" required value="pochta07@mail.ru" placeholder="example@mail.ru">
+                    </label>
+                    <label class="profile-form__label">
+                      <span>Телефон</span>
+                      <input type="tel" name="user-phone" required value="+7 (999) 999-99-99" placeholder="+7 (999) 111-22-33">
+                    </label>
+                    <label class="profile-form__label">
+                      <span>Имя аккаунта</span>
+                      <input type="text" name="user-nickname" required value="Alex Y.E." placeholder="Nickname">
+                    </label>
+                    <label class="profile-form__label">
+                      <span>Профиль в инстаграм</span>
+                      <input type="text" name="user-instagram" value="@Alex_YE" placeholder="@nickname">
+                    </label>
+                    <label class="profile-form__label">
+                      <span>Адрес доставки</span>
+                      <input type="text" name="user-delivery-address" placeholder="Город, улица, дом">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-form__section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-6">
+                    <h2 class="profile-form__title">Изменить пароль</h2>
+                    <label class="profile-form__label">
+                      <span>Старый пароль</span>
+                      <div class="profile-form__input-wrapper">
+                        <input type="password" name="user-current-password" required value="7127sdf29hr3872gf" placeholder="Введите старый пароль">
+                        <button class="profile-form__change-view-btn" type="button">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7C15.7855 7 21 12 21 12C21 12 15.7855 17 12 17C8.21453 17 3 12 3 12C3 12 8.21453 7 12 7Z" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path class="denial" d="M5 19L19 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <span class="visually-hidden">Переключатель отображения пароля</span>
+                        </button>
+                      </div>
+                    </label>
+                    <label class="profile-form__label">
+                      <span>Новый пароль</span>
+                      <div class="profile-form__input-wrapper">
+                        <input type="password" name="user-new-password" required placeholder="Введите новый пароль">
+                        <button class="profile-form__change-view-btn" type="button">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7C15.7855 7 21 12 21 12C21 12 15.7855 17 12 17C8.21453 17 3 12 3 12C3 12 8.21453 7 12 7Z" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path class="denial" d="M5 19L19 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <span class="visually-hidden">Переключатель отображения пароля</span>
+                        </button>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-form__section">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-6">
+                    <button class="btn profile-form__submit-btn" type="button">Сохранить изменения</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
