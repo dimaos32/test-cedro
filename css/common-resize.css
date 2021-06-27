@@ -42,6 +42,7 @@
 
   .btn {
     width: 100%;
+    padding: 12px 24px;
   }
 
   .header .col {
@@ -132,23 +133,23 @@
     font-size: 20px;
   }
 
-  .profile-form__label:not(:last-child) {
+  .profile-form__label {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .profile-form input:not(:last-of-type) {
     margin-bottom: 16px;
   }
 
-  .profile-form__label span {
-    margin-bottom: 8px;
-    font-size: 16px;
+  .profile-form__input-wrapper:not(:last-of-type) {
+    margin-bottom: 16px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
-  }
-
-  .header {
-    padding: 16px 0;
   }
 
   .main-nav__user-menu {
@@ -175,13 +176,6 @@
 
   .trends__container {
     display: block;
-  }
-
-  .trends__title {
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 1.17;
-    text-transform: uppercase;
   }
 
   .trends__slider {
@@ -220,12 +214,12 @@
   }
 
   .main-nav__user-menu {
-    margin-right: 8px;
+    margin-right: 16px;
   }
 
   .trends__title {
-    font-size: 48px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.14;
   }
 
   .product-card__badge {
