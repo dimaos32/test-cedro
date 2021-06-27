@@ -169,6 +169,25 @@
     margin-bottom: 8px;
   }
 
+  .trends {
+    margin-bottom: 64px;
+  }
+
+  .trends__container {
+    display: block;
+  }
+
+  .trends__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.17;
+    text-transform: uppercase;
+  }
+
+  .trends__slider {
+    margin: 32px 0;
+  }
+
   .footer__menu {
     padding: 64px 0 40px;
   }
@@ -201,6 +220,30 @@
   }
 
   .main-nav__user-menu {
+    margin-right: 8px;
+  }
+
+  .trends__title {
+    font-size: 48px;
+    line-height: 1.17;
+  }
+
+  .product-card__badge {
+    top: 16px;
+    left: 16px;
+  }
+
+  .product-card__like-btn {
+    top: 18px;
+    right: 16px;
+  }
+
+  .product-card__details {
+    padding: 16px;
+  }
+
+  .product-card__current-price {
+    margin: 0;
     margin-right: 8px;
   }
 }
