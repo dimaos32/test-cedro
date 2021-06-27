@@ -44,7 +44,7 @@
     display: none;
   }
 
-  .footer__menu .col-lg-4:not(:last-of-type) {
+  .full-menu .col-lg-4:not(:last-of-type) {
     margin-bottom: 40px;
   }
 }
@@ -62,17 +62,22 @@
     margin-right: 16px;
   }
 
-  .footer__menu {
-    padding: 64px 0 40px;
+  .full-menu__wrapper {
+    display: block;
+    padding-bottom: 40px;
   }
 
-  .footer__menu-title {
+  .full-menu__title {
     margin-bottom: 16px;
     font-size: 20px;
   }
 
-  .footer__menu-item:not(:last-of-type) {
+  .full-menu__item:not(:last-of-type) {
     margin-bottom: 8px;
+  }
+
+  .footer__menu {
+    padding: 64px 0 40px;
   }
 
   .footer__contacts {
@@ -109,7 +114,7 @@
 
 @media (max-width: 374px) {
   .header__logo {
-    margin-right: 8px;
+    margin-right: 4px;
   }
 
   .main-nav__user-menu {
