@@ -102,10 +102,12 @@
   if (cards) {
     const onLikeClick = ((evt) => {
       const btn = evt.target.closest('.product-card__like-btn');
-      const altText = btn.querySelector('span');
 
       if (btn) {
+        const altText = btn.querySelector('span');
+
         evt.preventDefault();
+
         if (btn.classList.contains('product-card__like-btn--liked')) {
           btn.classList.remove('product-card__like-btn--liked');
           altText.textContent = 'Добавить в избранное';
